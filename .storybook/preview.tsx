@@ -10,7 +10,7 @@ const withThemeProvider = (Story) => {
   return (
     <CssVarsProvider defaultMode="light" disableTransitionOnChange>
       <AppTheme>
-        <Box sx={{ position: 'fixed', top: 16, right: 16, zIndex: 9999 }}>
+        <Box sx={{ position: 'fixed', top: 16, right: 16, zIndex: 2147483647 }}>
           <ColorModeSelect size="small" />
         </Box>
         <Box
@@ -18,6 +18,8 @@ const withThemeProvider = (Story) => {
             minHeight: '100vh',
             backgroundColor: 'background.default',
             color: 'text.primary',
+            paddingTop: '56px',
+            paddingRight: '56px',
           }}
         >
           <Story />
